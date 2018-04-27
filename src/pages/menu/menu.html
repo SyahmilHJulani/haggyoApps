@@ -1,0 +1,52 @@
+<ion-content padding>
+		<ion-grid>
+			<ion-row>
+			<div class="logo">
+			<img src="assets/imgs/pblogov4.png" alt="logo" height="110px" width="200px" />
+			</div>
+		</ion-row>
+		<ion-row>
+			<ion-col (click)="accountpage()">
+				<div class="menubox"><img src="assets/imgs/menu-1.png" alt="logo" height="60px" width="60px" />
+					<p><b>ACCOUNT</b></p>
+					</div>
+			</ion-col>
+			<ion-col (click)="newspage()">
+				<div class="menubox"><img src="assets/imgs/menu-2.png" alt="logo" height="60px" width="60px" />
+					<p><b>NEWS</b></p>
+				</div>
+			</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col (click)="announcementpage()">
+				<div class="menubox"><img src="assets/imgs/menu-3.png" alt="logo" height="60px" width="60px" />
+					<p><b>ANNOUNCEMENT</b></p>
+				</div>
+			</ion-col>
+			<ion-col (click)="ccapage()">
+				<div class="menubox"><img src="assets/imgs/menu-4.png" alt="logo" height="60px" width="60px" />
+					<p><b>CCA</b></p>
+				</div>
+			</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col (click)="discussionpage()">
+				<div class="menubox"><img src="assets/imgs/menu-5.png" alt="logo" height="60px" width="60px" />
+					<p><b>DISCUSSION</b></p>
+				</div>
+			</ion-col>
+			<ion-col (click)="attendancepage()">
+				<div class="menubox"><img src="assets/imgs/menu-6.png" alt="logo" height="60px" width="60px" />
+					<p><b>ATTENDANCE</b></p></div>
+			</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col (click)="onLogout()"> 
+			<div class="info">
+				<h4>Log Out</h4>
+			</div>
+		</ion-col>
+		</ion-row>
+	</ion-grid>
+
+</ion-content>

@@ -1,0 +1,43 @@
+<ion-content padding>
+	<ion-grid>
+		<ion-row>
+		<ion-col>
+			<img src="assets/imgs/back.png" alt="backbutton" width="30px" height="30px" (click)="goback()"/>
+		</ion-col>
+		<ion-col>
+			<img src="assets/imgs/pblogov4.png" alt="logo" />
+		</ion-col>
+		</ion-row>
+		<ion-row>
+			<div text-center class="propic">
+			<img src="assets/imgs/pbcca.png" alt="pbaccalogo" />
+			</div>
+		</ion-row>
+		<ion-row>
+			<div class="info4">
+				<h4>Current Club:</h4>
+			</div>
+			<div class="info">
+				<h4>1)Dodgeball  2)PTBB  3)Gaming</h4>
+			</div>
+		</ion-row>
+		<ion-row>
+			<div class="info3">
+				<h4>86 EPs</h4>
+			</div>
+		</ion-row>
+		<ion-row>
+			<h4>Club News</h4>
+			<ion-list class="info2">
+			<div class="info" *ngFor="let cca of ccaList | async">
+				<h4>{{ cca.ccaTitle }}</h4>
+				<p>{{ cca.ccaDetails }}</p>
+			</div>
+			</ion-list>
+		</ion-row>
+	</ion-grid>
+	<ion-fab bottom right>
+	<button ion-fab (click)="addcca()"><ion-icon name="add"></ion-icon></button>
+  	</ion-fab>
+
+</ion-content>

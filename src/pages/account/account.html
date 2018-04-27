@@ -1,0 +1,35 @@
+<ion-content padding>
+	<ion-grid>
+		<ion-row>
+		<ion-col>
+			<img src="assets/imgs/back.png" alt="backbutton" width="30px" height="30px" (click)="goback()"/>
+		</ion-col>
+		<ion-col>
+			<img src="assets/imgs/pblogov4.png" alt="logo" />
+		</ion-col>
+		</ion-row>
+		<ion-row>
+			<div text-center class="propic">
+			<img src="assets/imgs/profile-1.png" alt="profilepicture" />
+			</div>
+		</ion-row>
+		<ion-row>
+			<ion-list class="info2">
+			<div class="info" *ngFor="let account of accountList | async">
+				<h4>Name: {{ account.Name }}</h4>
+				<h4>Student ID: {{ account.StudentID }}</h4>
+				<h4>School: {{ account.School }}</h4>
+				<h4>Course: {{ account.Course }}</h4>
+				<h4>Intake: {{ account.Intake }}</h4>
+				
+			</div>
+			</ion-list>
+		</ion-row>
+		<ion-row>
+			<div text-center class="qrpic">
+				<img src="assets/imgs/qrcode.PNG" alt="qrcode" />
+			</div>
+		</ion-row>
+	</ion-grid>
+
+</ion-content>

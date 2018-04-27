@@ -1,0 +1,29 @@
+<ion-content padding>
+	<ion-grid>
+		<ion-row>
+		<ion-col>
+			<img src="assets/imgs/back.png" alt="backbutton" width="30px" height="30px" (click)="goback()"/>
+		</ion-col>
+		<ion-col>
+			<img src="assets/imgs/pblogov4.png" alt="logo" />
+		</ion-col>
+		</ion-row>
+		<ion-row>
+			<div text-center class="propic">
+			<img src="assets/imgs/pbmodule.png" alt="pbmodulelogo" />
+			</div>
+		</ion-row>
+		<ion-row>
+			<ion-list class="info2">
+			<div class="info" *ngFor="let discussions of discussionsList | async" (click)="discussionsDetails(discussions)">
+				<h4>{{ discussions.discussionsTitle }}</h4>
+				<p>Post by: {{ discussions.discussionsPostby }}</p>
+				<p>Date: {{ discussions.discussionsDate }}</p>
+			</div>
+			</ion-list>
+		</ion-row>
+	</ion-grid>
+	<ion-fab bottom right>
+	<button ion-fab (click)="addDiscussions()"><ion-icon name="add"></ion-icon></button>
+  	</ion-fab>
+</ion-content>

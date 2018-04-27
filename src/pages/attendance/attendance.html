@@ -1,0 +1,39 @@
+<ion-content padding>
+	<ion-grid>
+		<ion-row>
+		<ion-col>
+			<img src="assets/imgs/back.png" alt="backbutton" width="30px" height="30px" (click)="goback()"/>
+		</ion-col>
+		<ion-col>
+			<img src="assets/imgs/pblogov4.png" alt="logo" />
+		</ion-col>
+		</ion-row>
+		<ion-row>
+			<div text-center class="propic">
+			<img src="assets/imgs/pbattendance.png" alt="pbattendancelogo" />
+			</div>
+		</ion-row>
+		<ion-row>
+		<ion-col>
+			<div class="info">
+				<h4>AWEP: 100%</h4>
+				<h4>WADT: 100%</h4>
+				<h4>MWE: 100%</h4>
+				<h4>DBDI: 95%</h4>
+			</div>
+		</ion-col>
+		<ion-col>
+			<div class="info2" (click)="scan()">
+				<img src="assets/imgs/photo-camera.png" alt="photocamera" class="camera" />
+				<h4>Barcode Scanner</h4>
+			</div>
+		</ion-col>
+		</ion-row>
+		<ion-row>
+			<div class="info3" *ngIf="scannedData.text">
+				<p>Attendance Success for Module: {{ scannedData.text }}</p>
+			</div>
+		</ion-row>
+	</ion-grid>
+
+</ion-content>

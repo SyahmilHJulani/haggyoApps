@@ -1,0 +1,38 @@
+<div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+  <div class="flb">
+
+    <div class="Aligner-item Aligner-item--top"></div>
+    <div class="spinner">
+    	<img src="assets/splashscreen.png">
+	  <div class="rect1"></div>
+	  <div class="rect2"></div>
+	  <div class="rect3"></div>
+	  <div class="rect4"></div>
+	  <div class="rect5"></div>
+	</div>
+    <div class="Aligner-item Aligner-item--bottom"></div>
+  </div>
+</div>
+
+<ion-content padding>
+
+			<img src="assets/imgs/pblogo.png" alt="logo" />
+
+			<h3 text-center><i>"Innovation begins here"</i></h3>
+
+	<form #f="ngForm" (ngSubmit)="onSignin(f)">
+		<ion-list>
+			<ion-item>
+				<ion-label fixed>Email</ion-label>
+				<ion-input type="text" placeholder="youremail@pb.edu.bn" name="email" ngModel required></ion-input>
+			</ion-item>
+			<br/>
+			<ion-item>
+				<ion-label fixed>Password</ion-label>
+				<ion-input type="text" placeholder="abcd_1234" name="password" ngModel required [minlength]="6"></ion-input>
+			</ion-item>
+		</ion-list>
+		<button ion-button icon-left block type="submit" color="primary" [disabled]="!f.valid">Login</button>
+	</form>
+
+</ion-content>

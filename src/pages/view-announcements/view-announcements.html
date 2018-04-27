@@ -1,0 +1,24 @@
+<ion-content padding>
+	<ion-grid>
+		<ion-row>
+		<ion-col>
+			<img src="assets/imgs/back.png" alt="backbutton" width="30px" height="30px" (click)="goback()"/>
+		</ion-col>
+		<ion-col>
+			<img src="assets/imgs/pblogov4.png" alt="logo" />
+		</ion-col>
+		</ion-row>
+		<ion-row>
+			<div text-center class="propic">
+			<img src="assets/imgs/pbannouncement.png" alt="pbannouncementlogo" />
+			</div>
+		</ion-row>
+		<ion-row>
+			<div class="info">
+				<h4>{{ announcements.announcementsTitle }}</h4>
+				<p>{{ announcements.announcementsDetails }}</p>
+			</div>
+		</ion-row>
+	</ion-grid>
+
+</ion-content>

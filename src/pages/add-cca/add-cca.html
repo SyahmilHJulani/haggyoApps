@@ -1,0 +1,31 @@
+<ion-content padding>
+	<ion-grid>
+		<ion-row>
+		<ion-col>
+			<img src="assets/imgs/back.png" alt="backbutton" width="30px" height="30px" (click)="goback()"/>
+		</ion-col>
+		<ion-col>
+			<img src="assets/imgs/pblogov4.png" alt="logo" />
+		</ion-col>
+		</ion-row>
+		<ion-row>
+			<div text-center class="propic">
+			<img src="assets/imgs/pbcca.png" alt="pbccalogo" />
+			</div>
+		</ion-row>
+		<ion-row>
+			<form [formGroup]="createCcaForm" (submit)="createCca()" novalidate>
+			<ion-item>
+				<ion-label floating>Title</ion-label>
+				<ion-input type="text" [(ngModel)]="model.ccaTitle" formControlName="ccaTitle"></ion-input> 
+			</ion-item>
+			<ion-item>
+				<ion-label floating>Details</ion-label>
+				<ion-textarea type="text" row="10" [(ngModel)]="model.ccaDetails" formControlName="ccaDetails"></ion-textarea>
+			</ion-item>
+		<button ion-button type="submit" block [disabled]="!createCcaForm.valid">Add Club News</button>
+			</form>
+		</ion-row>
+	</ion-grid>
+
+</ion-content>
